@@ -1,11 +1,12 @@
-function register() {
+function register(event) {
+    event.preventDefault();
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const phone = document.getElementById("phone").value;
-  
+
   const data = { name: name, email: email, password: password, phone: phone };
-  
+
   fetch("http://127.0.0.1:3000/newpatient", {
   method: "POST",
   body: JSON.stringify(data),
