@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="prescriptions.css" rel="stylesheet">
+  <title>Prescriptions</title>
+</head>
+
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+  <div class="container mx-auto py-4">
+  <div id="not-logged-in" class="hidden text-center text-red-500">You are not logged in</div>
+  <div id="coming-soon" class="hidden text-center text-blue-500">Coming soon</div>
+  <div id="table-container" class="hidden">
+    <h1 class="text-lg font-medium mb-4">Prescriptions</h1>
+    <table class="table-auto text-left w-full">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">Doctor Name</th>
+          <th class="px-4 py-2">Date</th>
+          <th class="px-4 py-2">Prescription</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+<script src="prescriptions.js"></script>
+
+</html>
