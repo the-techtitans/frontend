@@ -1,113 +1,269 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Home Page</title>
-  </head>
-  <body class="bg-gray-200">
-    <section class="bg-white">
-      <img src="hero-image.jpg" alt="Hero Image" class="w-full">
-      <div class="text-center text-4xl font-medium text-indigo-500">Find the best doctor for you</div>
-    </section>
-    <section class="bg-gray-100 py-12">
-      <div class="container mx-auto">
-        <div class="flex items-center justify-center">
-          <form class="w-full max-w-md">
-            <div class="flex items-center border-b border-b-2 border-indigo-500 py-2">
-              <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Search by specialty, location or name">
-              <button class="flex-shrink-0 bg-indigo-500 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-600 text-sm border-4 text-white py-1 px-2 rounded-full" type="button">
-                Search
-              </button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidhya</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="homepage.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+<header class="header">
+  <link href="navbar.css" rel="stylesheet">
+  <a href="/profile.html"><img src="logos/Vaidhya.png"></a>
+
+  <div class="flex-container">
+    <nav class="navbar">
+      <a href="/homepage.html">Home</a>
+      <a href="/appointment.html">Book</a>
+      <a href="/login.html" id="login">Sign In</a>
+      <a href="/signup.html">Sign Up</a>
+      <a href="/profile.html" id="profile" class="hidden">My Profile</a>
+    </nav>
+  </div>
+
+  <script src="navbar.js"></script>
+
+</header>
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="logos/home-img.svg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>All in One Healthcare Management System</h3>
+        <p>Book appointments, find doctors near you at affordable prices for a variety of services, all in one place!</p>
+        <a href="#" class="btn">Book an appointment<span class="fas fa-chevron-right"></span> </a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>140+</h3>
+        <p>doctors at work</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1000+</h3>
+        <p>satisfied patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>6+</h3>
+        <p>cities</p>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>Book Appointments Easily</h3>
+            <p>With our simple process, book an appointment with a doctor at a price that suits you at a time of your choosing</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>Expert doctors</h3>
+            <p>All our doctors are verifed by us before being listed on our platform</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>View prescriptions</h3>
+            <p>View prescriptions prescribed by your doctor and show to participating dispensaries for added security</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>total care</h3>
+            <p>We help doctors manage their appointments so they can go and give the best care to everyone</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="logos/about-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>We help give you better care</h3>
+            <p>Our platform is not just to help people book appointments, it also allows doctors to list themselves for others to find and seek help from.</p>
+            <p>Doctors use our inbuilt appointment management system to facilitate more efficient care by letting us handle the bureaucracy</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- doctors section starts  -->
+<!-- doctors section ends -->
+
+<!-- booking section starts   -->
+<!-- booking section ends -->
+
+<!-- review section starts  -->
+<!--
+<section class="review" id="review">
+
+    <h1 class="heading"> client's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/pic-1.png" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
             </div>
-          </form>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>
         </div>
-      </div>
-              <div class="flex flex-wrap py-6">
-          <div class="w-1/4 text-center">
-            <i class="fas fa-tooth fa-3x text-indigo-500"></i>
-            <p class="text-lg font-medium text-indigo-500">Dentistry</p>
-          </div>
-          <div class="w-1/4 text-center">
-            <i class="fas fa-user-md fa-3x text-indigo-500"></i>
-            <p class="text-lg font-medium text-indigo-500">General Medicine</p>
-          </div>
-          <div class="w-1/4 text-center">
-            <i class="fas fa-heartbeat fa-3x text-indigo-500"></i>
-            <p class="text-lg font-medium text-indigo-500">Cardiology</p>
-          </div>
-          <div class="w-1/4 text-center">
-            <i class="fas fa-user-nurse fa-3x text-indigo-500"></i>
-            <p class="text-lg font-medium text-indigo-500">Pediatrics</p>
-          </div>
+
+        <div class="box">
+            <img src="image/pic-2.png" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>
         </div>
-      </div>
-    </section>
-    <section class="bg-gray-200 py-12">
-      <div class="container mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-2xl font-medium text-indigo-500">Our Features</h2>
+
+        <div class="box">
+            <img src="image/pic-3.png" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>
         </div>
-        <div class="flex flex-wrap -mx-6">
-          <div class="w-1/3 px-6 mb-6">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <i class="fas fa-calendar-check fa-3x text-indigo-500"></i>
-              <h3 class class="text-lg font-medium text-indigo-500 mt-4">Online Appointment Booking</h3>
-<p class="text-gray-600">Book appointments with top doctors from the comfort of your home or office.</p>
-</div>
-</div>
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<i class="fas fa-check-circle fa-3x text-indigo-500"></i>
-<h3 class="text-lg font-medium text-indigo-500 mt-4">Verified Doctors</h3>
-<p class="text-gray-600">All of our doctors are verified and have the necessary qualifications to provide top-notch care.</p>
-</div>
-</div>
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<i class="fas fa-head-side-mask fa-3x text-indigo-500"></i>
-<h3 class="text-lg font-medium text-indigo-500 mt-4">24/7 Online Consultations</h3>
-<p class="text-gray-600">Get medical advice from top doctors anytime, anywhere.</p>
-</div>
-</div>
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<i class="fas fa-user-md fa-3x text-indigo-500"></i>
-<h3 class="text-lg font-medium text-indigo-500 mt-4">Detailed Doctor Profiles</h3>
-<p class="text-gray-600">View detailed information about our doctors, including qualifications and patient reviews.</p>
-</div>
-</div>
-</div>
-</div>
+
+    </div>
+
 </section>
-<section class="bg-gray-100 py-12">
-<div class="container mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-2xl font-medium text-indigo-500">What Our Customers Say</h2>
-</div>
-<div class="flex flex-wrap -mx-6">
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<img src="customer-1.jpg" alt="Customer 1" class="w-10 h-10 rounded-full mx-auto mb-4">
-<p class="text-gray-600">"I was able to find the perfect doctor for my needs and schedule an appointment quickly and easily."</p>
-<p class="text-indigo-500 font-medium">- John Doe</p>
-</div>
-</div>
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<img src="customer-2.jpg" alt="Customer 2" class="w-10 h-10 rounded-full mx-auto mb-4">
-<p class="text-gray-600">"I was able to find a great doctor in my area and book an appointment within minutes."</p>
-<p class="text-indigo-500 font-medium">- Jane Smith</p>
-</div>
-</div>
-<div class="w-1/3 px-6 mb-6">
-<div class="bg-white p-6 rounded-lg shadow-md">
-<img src="customer-3.jpg" alt="Customer 3" class="w-10 h-10 rounded-full mx-auto mb-4">
-<p class="text-gray-600">"I was able to consult with a doctor online at any time, which was very convenient for me."</p>
-<p class="text-indigo-500 font-medium">- Michael Johnson</p>
-</div>
-</div>
-</div>
-</div>
+
+-->
+<!-- review section ends -->
+
+<!-- blogs section starts  -->
+
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> anasbhai@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+        </div>
+
+    </div>
+
+
 </section>
-  </body>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
 </html>
