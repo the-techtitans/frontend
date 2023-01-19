@@ -5,7 +5,7 @@ fetch('http://127.0.0.1:3000/apptypes')
     const appointmentTypeSelect = document.getElementById('appointment-type');
     data.forEach(type => {
       const option = document.createElement('option');
-      option.value = new Array(type.name, type.id);
+      option.value = type.name;
       option.text = type.name;
       appointmentTypeSelect.add(option);
     });
@@ -26,17 +26,14 @@ fetch('http://127.0.0.1:3000/cities')
 // Handle form submission
 document.getElementById('appointment-form').addEventListener('submit', e => {
   e.preventDefault();
-  let appointmentType = document.getElementById('appointment-type').value.split(',');
+  let appointmentType = document.getElementById('appointment-type').value;
   const city = document.getElementById('city').value;
 
   // Make GET request to API
   let url = new URL("http://127.0.0.1:3000/find");
   url.searchParams.set('city', city);
-  if (typeof appointmentType[0] != 'undefined') {
-    url.searchParams.set('apptype', appointmentType[0]);
-  } else {
-    url.searchParams.set('apptype', '');
-  }
+  url.searchParams.set('apptype', appointmentType);
+
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -51,7 +48,6 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
             let x = row.getElementsByTagName('td')[i].innerHTML;
             if (typeof x != 'undefined') {
               arr.push(x);
-              console.log(x);
             }
           }
           //0 to 6
@@ -68,7 +64,6 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
         const docid = document.createElement('td');
         docid.classList.add('hidden');
         docid.innerText = result.docid;
-        console.log(result.docid);
         row.append(docid);
         const docname = document.createElement('td');
         docname.innerText = result.docname;
@@ -85,12 +80,11 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
         const price = document.createElement('td');
         price.innerText = result.price;
         row.appendChild(price);
-        table.appendChild(row);
         const appid = document.createElement('td');
-        docid.classList.add('hidden');
-        docid.innerText = appointmentType[1];
-        console.log(appointmentType[1]);
-        row.append(appid);
+        appid.classList.add('hidden');
+        appid.innerText = result.appid;
+        row.appendChild(appid);
+        table.appendChild(row);
 
       });
       const results = document.getElementById('appointment-results');
