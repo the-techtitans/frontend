@@ -18,7 +18,8 @@ function login(event) {
         }
       })
       .then((data) => {
-        console.log("Success:", data);
+        localStorage.setItem('jwt', data);
+        window.location = "/profile.html";
         // redirect to the home page or show a success message
       })
       .catch((error) => {
