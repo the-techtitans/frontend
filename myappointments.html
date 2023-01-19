@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="myappointments.css" rel="stylesheet">
+    <script src="myappointments.js"></script>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div id="not-logged-in" class="hidden">
+        <p class="text-center text-red-500">You are not logged in</p>
+      </div>
+      <div id="coming-soon" class="hidden">
+        <p class="text-center text-blue-500">Coming soon</p>
+      </div>
+      <div id="appointments" class="hidden">
+        <h2 class="text-center text-2xl">My Appointments</h2>
+        <table class="table-auto w-full" id="my-appointments">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Doctor Name</th>
+              <th class="px-4 py-2">Date</th>
+              <th class="px-4 py-2">Appointment Type</th>
+              <th class="px-4 py-2">Status</th>
+              <th class="px-4 py-2">Prescription</th>
+            </tr>
+          </thead>
+          <tbody id="appointment-list"></tbody>
+        </table>
+        <div id="no-appointments" class="hidden">
+          <p class="text-center text-red-500">You have no appointments</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
