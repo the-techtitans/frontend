@@ -31,7 +31,6 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
 
   // Make GET request to API
   let url = new URL("http://127.0.0.1:3000/find");
-
   url.searchParams.set('city', city);
   url.searchParams.set('apptype', appointmentType);
   fetch(url)
@@ -39,6 +38,7 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
     .then(data => {
       // Display results in table
       const table = document.getElementById('result-table');
+      table.innerHTML = '';
       data.forEach(result => {
         const row = document.createElement('tr');
         row.addEventListener('click', function () {
