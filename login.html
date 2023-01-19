@@ -6,7 +6,7 @@
   </head>
   <body class="bg-gray-200 h-screen flex items-center justify-center">
     <div class="w-full max-w-xs">
-      <form class="bg-white p-6 rounded-lg shadow-md" onsubmit="login(event)" >
+      <form class="bg-white p-6 rounded-lg shadow-md">
         <h1 class="text-lg font-medium mb-4">Sign In</h1>
         <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2" for="email">
@@ -33,9 +33,10 @@
           />
         </div>
         <div class="flex items-center justify-between">
+          <a href="signup.html" class="bg-white text-blue-600 py-2 px-4 rounded-lg hover:bg-indigo-600 hover:text-white">Sign Up</a>
           <button
-            class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600"
-            type="submit"
+            class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600 mr-2"
+            onclick="login()"
           >
             Sign In
           </button>
