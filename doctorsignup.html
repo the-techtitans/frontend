@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Registration Page</title>
+  </head>
+  <body class="bg-gray-200 h-screen flex items-center justify-center">
+    <div class="w-full max-w-xs">
+      <form class="bg-white p-6 rounded-lg shadow-md" onsubmit="register(event)">
+        <h1 class="text-lg font-medium mb-4">Sign Up</h1>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2" for="name">
+            Name
+          </label>
+          <input
+            class="w-full border border-gray-400 p-2 rounded-lg"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="w-full border border-gray-400 p-2 rounded-lg"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="w-full border border-gray-400 p-2 rounded-lg"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2" for="password-repeat">
+            Repeat Password
+          </label>
+          <input
+            class="w-full border border-gray-400 p-2 rounded-lor-lg"
+type="password"
+id="password-repeat"
+name="password-repeat"
+required
+onchange="checkPasswordMatch()"
+/>
+<div id="password-error" class="text-red-500 text-xs"></div>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 font-medium mb-2" for="phone">
+Phone
+</label>
+<input
+         class="w-full border border-gray-400 p-2 rounded-lg"
+         type="tel"
+         id="phone"
+         name="phone"
+         required
+       />
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 font-medium mb-2" for="address">
+Address
+</label>
+<input
+         class="w-full border border-gray-400 p-2 rounded-lg"
+         type="text"
+         id="address"
+         name="address"
+         required
+       />
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 font-medium mb-2" for="city">
+City
+</label>
+<input
+         class="w-full border border-gray-400 p-2 rounded-lg"
+         type="text"
+         id="city"
+         name="city"
+         required
+       />
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 font-medium mb-2" for="speciality">
+Speciality
+</label>
+<select id="speciality" name="speciality" class="w-full border border-gray-400 p-2 rounded-lg" required>
+<option value="">Select Speciality</option>
+</select>
+</div>
+<div class="flex items-center justify-between">
+<button
+class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600"
+id="register-button"
+type="submit"
+<!-- disabled -->
+>
+Sign Up
+</button>
+</div>
+</form>
+</div>
+<script src="doctorsignup.js"></script>
+  </body>
+</html>
