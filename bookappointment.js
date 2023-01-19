@@ -1,21 +1,32 @@
 // Get variables from local storage
 const jwt = localStorage.getItem('jwt');
 const docid = localStorage.getItem('docid');
-const apptype = localStorage.getItem('apptype');
+const apptype = localStorage.getItem('appname');
 const docname = localStorage.getItem('docname');
 const city = localStorage.getItem('city');
 const address = localStorage.getItem('address');
 const price = localStorage.getItem('price');
 const appname = localStorage.getItem('appname');
+const appid = localStorage.getItem('apptype');
+
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+};
 
 // Check if user is logged in
 if (!jwt) {
   document.getElementById('not-logged-in').classList.remove('hidden');
 } else {
   // Decode JWT to get patid and is_doctor
-  const decoded = jwt_decode(jwt);
-  const patid = decoded.patid;
-  const is_doctor = decoded.is_doctor;
+  const decoded = parseJwt(jwt);
+  const patid = decoded.id;
+  const is_doctor = decoded.isdoctor;
 
   // Populate form fields with stored variables
   document.getElementById('doc-name').value = docname;
@@ -50,7 +61,8 @@ if (!jwt) {
         datetime: datetime,
         phyorvirt: interactionMethod,
         status: "scheduled",
-        prescription: ""
+        prescription: "",
+        apptype: appid
       })
     })
     .then(response => {
