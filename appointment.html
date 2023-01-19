@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<style>
+.table-auto {
+  width: 100%;
+}
+
+.table-auto th,
+.table-auto td {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table-auto tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+</style>
+    <title>appointment</title>
+  </head>
+  <body class="bg-gray-200 h-screen flex items-center justify-center">
+  <div class="container mx-auto">
+  <form id="appointment-form" class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-medium text-indigo-500">Find an Appointment</h2>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="appointment-type">Appointment Type</label>
+      <select class="form-select py-2 px-3 text-gray-700" id="appointment-type">
+        <option value="">Select an appointment type</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="city">City</label>
+      <select class="form-select py-2 px-3 text-gray-700" id="city">
+        <option value="">Select a city</option>
+      </select>
+    </div>
+    <button type="submit" class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600">Find</button>
+  </form>
+  <div class="appointment-results hidden" id="appointment-results">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-medium text-indigo-500">Results</h2>
+      <table class="table-auto">
+        <thead>
+          <tr>
+            <th class="px-4 py-2">Doctor Name</th>
+            <th class="px-4 py-2">City</th>
+            <th class="px-4 py-2">Address</th>
+            <th class="px-4 py-2">Appointment Type</th>
+            <th class="px-4 py-2">Price</th>
+          </tr>
+        </thead>
+        <tbody id="result-table"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  </body>
+      <script src="appointment.js"></script>
+</html>
