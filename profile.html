@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Login Page</title>
+  </head>
+  <body class="bg-gray-200 h-screen flex items-center justify-center">
+
+<nav class="fixed w-full top-0 bg-white z-50">
+  <div class="container mx-auto flex items-center justify-between py-4">
+    <a href="#">
+      <img src="profile.png" class="h-8 w-8 rounded-full" alt="Profile picture">
+    </a>
+    <div class="flex items-center">
+      <a href="#" class="px-4 py-2 text-blue-500 hover:underline">Book Appointment</a>
+      <a href="#" class="px-4 py-2 text-blue-500 hover:underline">View Prescriptions</a>
+    </div>
+  </div>
+</nav>
+<div class="container mx-auto py-4">
+  <div id="not-logged-in" class="hidden text-center text-red-500">You are not logged in</div>
+  <div id="coming-soon" class="hidden text-center text-blue-500">Coming soon</div>
+  <div id="user-info" class="hidden flex items-center">
+    <img src="profile.png" class="h-32 w-32 rounded-full mr-4" alt="Profile picture">
+    <div>
+      <h2 id="name"></h2>
+      <p id="email"></p>
+      <p id="phone"></p>
+    </div>
+  </div>
+  <div id="prescription-table" class="hidden">
+    <h3 class="text-lg font-medium mb-4">Past Prescriptions</h3>
+    <table class="table-auto text-left w-full">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">Doctor Name</th>
+          <th class="px-4 py-2">Date</th>
+          <th class="px-4 py-2">Prescription</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <div id="no-prescription" class="hidden text-center text-gray-500">You have no past prescriptions</div>
+  </div>
+</div>
+    <script src="profile.js"></script>
+  </body>
+</html>
