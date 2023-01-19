@@ -42,8 +42,12 @@ document.getElementById('appointment-form').addEventListener('submit', e => {
       data.forEach(result => {
         const row = document.createElement('tr');
         row.addEventListener('click', function () {
-          console.log("Hello World!");
+          console.log(row.innerHTML);
         });
+        const docid = document.createElement('td');
+        docid.classList.add('hidden');
+        docid.innerText = result.docid;
+        row.append(docid);
         const docname = document.createElement('td');
         docname.innerText = result.docname;
         row.appendChild(docname);
