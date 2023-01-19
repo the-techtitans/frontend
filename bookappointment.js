@@ -46,7 +46,7 @@ if (!jwt) {
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
     const interactionMethod = document.getElementById('interaction-method').value;
-    const datetime = date + ' ' + time;
+    const datetime = date + ' ' + time + ":00";
 
     // Make API call to http://127.0.0.1:3000/newappointment
     fetch('http://127.0.0.1:3000/newappointment', {
