@@ -6,17 +6,25 @@
   </head>
   <body class="bg-gray-200 h-screen flex items-center justify-center">
 
-<nav class="fixed w-full top-0 bg-white z-50">
-  <div class="container mx-auto flex items-center justify-between py-4">
-    <a href="#">
-      <img src="profile.png" class="h-8 w-8 rounded-full" alt="Profile picture">
-    </a>
-    <div class="flex items-center">
-      <a href="#" class="px-4 py-2 text-blue-500 hover:underline">Book Appointment</a>
-      <a href="#" class="px-4 py-2 text-blue-500 hover:underline">View Prescriptions</a>
-    </div>
+<header class="header">
+  <link href="navbar.css" rel="stylesheet">
+  <a href="/profile.html"><img src="logos/Vaidhya.png"></a>
+
+  <div class="flex-container">
+    <nav class="navbar">
+      <a href="/homepage.html">Home</a>
+      <a href="/appointment.html">Book</a>
+      <a href="/login.html" id="login">Sign In</a>
+      <a href="/signup.html">Sign Up</a>
+      <a href="/profile.html" id="profile" class="hidden">My Profile</a>
+    </nav>
   </div>
-</nav>
+
+  <script src="navbar.js"></script>
+
+</header>
+
+
 <div class="container mx-auto py-4">
   <div id="not-logged-in" class="hidden text-center text-red-500">You are not logged in</div>
   <div id="coming-soon" class="hidden text-center text-blue-500">Coming soon</div>
