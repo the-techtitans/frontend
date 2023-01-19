@@ -25,9 +25,29 @@ function register(event) {
   throw new Error("Error in registration");
   }
   })
-  .then((data) => {
-  console.log("Success:", data);
-  // redirect to the home page or show a success message
+  .then((_) => {
+      {
+      fetch("http://127.0.0.1:3000/login", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+    })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("Incorrect email or password");
+          }
+        })
+        .then((data) => {
+          localStorage.setItem('jwt', data);
+          window.location = "/profile.html";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          // show an error message
+        });
+      }
   })
   .catch((error) => {
   console.error("Error:", error);

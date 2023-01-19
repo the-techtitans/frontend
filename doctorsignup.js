@@ -4,7 +4,7 @@ function checkPasswordMatch() {
     const confirmPassword = document.getElementById("password-repeat").value;
     const error = document.getElementById("password-error");
     const registerButton = document.getElementById("register-button");
-  
+
     if (password !== confirmPassword) {
       error.innerHTML = "Passwords do not match";
       registerButton.disabled = true;
@@ -13,7 +13,7 @@ function checkPasswordMatch() {
       registerButton.disabled = false;
     }
   }
-  
+
   // function to fetch specialities
   function fetchSpecialities() {
     fetch("http://127.0.0.1:3000/specialities")
@@ -28,7 +28,7 @@ function checkPasswordMatch() {
         });
       });
   }
-  
+
   // function to register a new doctor
   function register(event) {
     event.preventDefault();
@@ -39,7 +39,7 @@ function checkPasswordMatch() {
     const address = document.getElementById("address").value;
     const city = document.getElementById("city").value;
     const specialityId = document.getElementById("speciality").value;
-  
+
     const data = {
       name: name,
       email: email,
@@ -49,7 +49,7 @@ function checkPasswordMatch() {
       city: city,
       speciality: specialityId
     };
-  
+
     fetch("http://127.0.0.1:3000/newdoctor", {
       method: "POST",
       body: JSON.stringify(data),
@@ -69,14 +69,39 @@ function checkPasswordMatch() {
         }
       })
       .then((data) => {
-        console.log("Success:", data);
         // redirect to the home page or show a success message
+        {
+          let data = {
+            email: email,
+            password: password,
+          };
+          fetch("http://127.0.0.1:3000/login", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" }
+    })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Incorrect email or password");
+              }
+            })
+            .then((data) => {
+              localStorage.setItem('jwt', data);
+              window.location = "/profile.html";
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              // show an error message
+            });
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
   // show an error message
   });
   }
-  
+
   // call the fetchSpecialities function on page load
   fetchSpecialities();
