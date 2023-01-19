@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="bookappointment.css" rel="stylesheet">
+  <title>Book Appointment</title>
+</head>
+
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+      <div class="container mx-auto">
+        <div id="not-logged-in" class="hidden bg-red-500 text-white p-4 rounded-lg text-center">
+          You are not logged in.
+        </div>
+        <div id="appointment-form" class="bg-white p-6 rounded-lg shadow-md ">
+          <h2 class="text-2xl font-medium text-indigo-500">Book an Appointment</h2>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="doc-name">Doctor Name</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="doc-name" type="text" readonly>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="city">City</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="city" type="text" readonly>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="address">Address</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="address" type="text" readonly>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="app-type">Appointment Type</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="app-type" type="text" readonly>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="price">Price</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="price" type="text" readonly>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="date">Date</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="date" type="date">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="time">Time</label>
+            <input class="form-input py-2 px-3 text-gray-700" id="time" type="time">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2" for="interaction-method">Interaction Method</label>
+        <select class="form-select py-2 px-3 text-gray-700" id="interaction-method">
+          <option value="physical">Physical</option>
+          <option value="virtual">Virtual</option>
+        </select>
+      </div>
+      <button id="submit-button" class="bg-indigo-500 text-white p-2 rounded-lg hover:bg-indigo-600">Submit</button>
+      </div>
+      </div>
+</body>
+<script src="bookappointment.js"></script>
+
+</html>
