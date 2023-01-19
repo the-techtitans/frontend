@@ -67,6 +67,7 @@ if (!jwt) {
     })
     .then(response => {
       // Handle success/error
+      window.location = "/myappointments.html";
     })
     .catch(error => {
       console.error(error);
