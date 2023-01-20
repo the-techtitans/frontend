@@ -8,20 +8,21 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
+  color: #777777;
 }
 
 .header img {
   max-width:30%;
 }
 
-.header .navbar a{
+.header .navbar a {
   font-size: 1.5rem;
   color: var(--light-color);
   margin-left: 2rem;
 }
 
 .header .navbar a:hover{
-  color: var(--green);
+  color: "green";
 }
 
 .hidden {
