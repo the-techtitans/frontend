@@ -6,4 +6,5 @@ if (ijwt) {
   document.getElementById('signup').className= "hidden";
   document.getElementById('profile').className = "";
   document.getElementById('myapps').className = "";
+  document.getElementById('signout').className = "";
 }
