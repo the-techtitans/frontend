@@ -1,46 +1,14 @@
-/* center the table on the page */
 table {
-  margin: 0 auto;
+    width: 100%;
 }
 
-/* make the table responsive */
-table {
-  width: 100%;
-  overflow-x: scroll;
-}
-
-/* style the table rows and cells */
-table tr, table td {
-  border: 1px solid #ddd;
-  padding: 8px;
+th, td {
+  border-bottom: 1px solid #ddd;
   text-align: left;
+  padding: 8px;
 }
 
-/* give the table a modern look */
-table {
-  border-collapse: collapse;
+tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
 }
-
-/* style the table headings */
-table th {
-  background-color: #f8f9fa;
-  color: #333;
-  font-weight: bold;
-}
-
-/* make the table more readable on smaller screens */
-@media (max-width: 600px) {
-  table, table tr, table td {
-    display: block;
-  }
-
-  table tr {
-    margin-bottom: 20px;
-  }
-
-  table td {
-    border: none;
-    text-align: center;
-  }
-}
-

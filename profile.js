@@ -61,14 +61,14 @@ if (!jwt) {
         document.getElementById("prescription-table").classList.remove("hidden");
         const tableBody = document.getElementById("table-body");
         data.forEach(prescription => {
-            const row = document.createElement("tr");
-            const doctorName = document.createElement("td");
+            let row = document.createElement("tr");
+            let doctorName = document.createElement("td");
             doctorName.innerHTML = prescription.docname;
             row.appendChild(doctorName);
-            const date = document.createElement("td");
+            let date = document.createElement("td");
             date.innerHTML = new Date(prescription.timestamp).toDateString();
             row.appendChild(date);
-            const prescriptionText = document.createElement("td");
+            let prescriptionText = document.createElement("td");
             prescriptionText.innerHTML = prescription.prescription;
             row.appendChild(prescriptionText);
             tableBody.appendChild(row);
