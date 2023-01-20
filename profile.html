@@ -28,16 +28,19 @@
 <div class="container mx-auto py-4" style="margin-top:10em;">
   <div id="not-logged-in" class="hidden text-center text-red-500">You are not logged in</div>
   <div id="coming-soon" class="hidden text-center text-blue-500">Coming soon</div>
-  <div id="user-info" class="hidden flex items-center">
+  <div id="user-info" class="hidden bg-white p-6 rounded-lg shadow-md mb-4">
+    <h2 class="text-2xl font-medium text-indigo-500">Your Profile</h2>
+  <div class="flex items-center bg-white p-6 rounded-lg">
     <img src="profile.png" class="h-32 w-32 rounded-full mr-4" alt="Profile picture">
     <div>
-      <h2 id="name"></h2>
-      <p id="email"></p>
-      <p id="phone"></p>
+      <h2 id="name" class="font-bold text-2xl"></h2>
+      <p>Email: <span id="email"></span></p>
+      <p>Phone Number: <span id="phone"></span></p>
     </div>
   </div>
-  <div id="prescription-table" class="hidden">
-    <h3 class="text-lg font-medium mb-4">Past Prescriptions</h3>
+  </div>
+  <div id="prescription-table" class="hidden bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-medium text-indigo-500">Past Prescriptions</h2>
     <table class="table-auto text-left w-full">
       <thead>
         <tr>
